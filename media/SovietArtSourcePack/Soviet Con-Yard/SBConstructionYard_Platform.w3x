@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<Includes>
+		<Include type="all" source="ART:SBUpgrades.xml"/>
+		<Include type="all" source="ART:SBUpgrades_NRM.xml"/>
+		<Include type="all" source="ART:SBUpgrades_SPM.xml"/>
+	</Includes>
+	<W3DHierarchy id="SBCONSTRUCTIONYARD_PLATFORM">
+		<Pivot Name="ROOTTRANSFORM" Parent="-1">
+			<Translation X="0.000000" Y="0.000000" Z="0.000000"/>
+			<Rotation X="-0.000000" Y="-0.000000" Z="-0.000000" W="1.000000"/>
+			<FixupMatrix M00="1.000000" M10="0.000000" M20="0.000000" M30="0.000000" M01="0.000000" M11="1.000000" M21="0.000000" M31="0.000000" M02="0.000000" M12="0.000000" M22="1.000000" M32="0.000000"/>
+		</Pivot>
+		<Pivot Name="UPGRADE_PAD" Parent="0">
+			<Translation X="35.000000" Y="-65.000000" Z="0.000000"/>
+			<Rotation X="-0.000000" Y="-0.000000" Z="-0.000000" W="1.000000"/>
+			<FixupMatrix M00="1.000000" M10="0.000000" M20="0.000000" M30="0.000000" M01="0.000000" M11="1.000000" M21="0.000000" M31="0.000000" M02="0.000000" M12="0.000000" M22="1.000000" M32="0.000000"/>
+		</Pivot>
+	</W3DHierarchy>
+	<W3DMesh id="SBCONSTRUCTIONYARD_PLATFORM.UPGRADE_PAD" GeometryType="Normal">
+		<BoundingBox>
+			<Min X="-43.967903" Y="55.061188" Z="0.000000"/>
+			<Max X="-23.967903" Y="75.061188" Z="0.000000"/>
+		</BoundingBox>
+		<BoundingSphere Radius="14.142136">
+			<Center X="-33.967903" Y="65.061188" Z="0.000000"/>
+		</BoundingSphere>
+		<Vertices>
+			<V X="-23.967903" Y="55.061188" Z="0.000000"/>
+			<V X="-43.967903" Y="55.061188" Z="0.000000"/>
+			<V X="-43.967903" Y="75.061188" Z="0.000000"/>
+			<V X="-23.967903" Y="75.061188" Z="0.000000"/>
+		</Vertices>
+		<Normals>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+			<N X="0.000000" Y="0.000000" Z="-1.000000"/>
+		</Normals>
+		<Tangents>
+			<T X="-0.000000" Y="-1.000000" Z="-0.000000"/>
+			<T X="-0.000000" Y="-1.000000" Z="-0.000000"/>
+			<T X="-0.000000" Y="-1.000000" Z="-0.000000"/>
+			<T X="-0.000000" Y="-1.000000" Z="-0.000000"/>
+		</Tangents>
+		<Binormals>
+			<B X="1.000000" Y="0.000000" Z="0.000000"/>
+			<B X="1.000000" Y="0.000000" Z="0.000000"/>
+			<B X="1.000000" Y="0.000000" Z="0.000000"/>
+			<B X="1.000000" Y="0.000000" Z="0.000000"/>
+		</Binormals>
+		<TexCoords>
+			<T X="1.000000" Y="0.000000"/>
+			<T X="0.000000" Y="0.000000"/>
+			<T X="0.000000" Y="1.000000"/>
+			<T X="1.000000" Y="1.000000"/>
+		</TexCoords>
+		<ShadeIndices>
+			<I>1</I>
+			<I>2</I>
+			<I>3</I>
+			<I>0</I>
+		</ShadeIndices>
+		<Triangles>
+			<T>
+				<V>2</V>
+				<V>3</V>
+				<V>1</V>
+				<Nrm X="0.000000" Y="0.000000" Z="-1.000000"/>
+				<Dist>0.000000</Dist>
+			</T>
+			<T>
+				<V>1</V>
+				<V>3</V>
+				<V>0</V>
+				<Nrm X="0.000000" Y="0.000000" Z="0.000000"/>
+				<Dist>-0.000000</Dist>
+			</T>
+		</Triangles>
+		<FXShader ShaderName="ObjectsSoviet.fx" TechniqueIndex="0">
+			<Constants>
+				<Texture Name="DiffuseTexture">
+					<Value>SBUpgrades</Value>
+				</Texture>
+				<Texture Name="NormalMap">
+					<Value>SBUpgrades_NRM</Value>
+				</Texture>
+				<Texture Name="SpecMap">
+					<Value>SBUpgrades_SPM</Value>
+				</Texture>
+				<Float Name="EnvMult">
+					<Value>1.000000</Value>
+				</Float>
+				<Bool Name="AlphaTestEnable">
+					<Value>true</Value>
+				</Bool>
+			</Constants>
+		</FXShader>
+	</W3DMesh>
+	<W3DContainer id="SBCONSTRUCTIONYARD_PLATFORM" Hierarchy="SBCONSTRUCTIONYARD_PLATFORM">
+		<SubObject SubObjectID="UPGRADE_PAD" BoneIndex="1">
+			<RenderObject>
+				<Mesh>SBCONSTRUCTIONYARD_PLATFORM.UPGRADE_PAD</Mesh>
+			</RenderObject>
+		</SubObject>
+	</W3DContainer>
+</AssetDeclaration>

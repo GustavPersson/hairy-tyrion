@@ -19,3 +19,9 @@
 *.exe
 *.out
 *.app
+
+#VS-files
+*.sdf
+*.opensdf
+*.suo
+*.vcxproj.user
